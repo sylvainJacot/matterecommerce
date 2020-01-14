@@ -1,38 +1,23 @@
-export const navigationListItems =  {
-navigation: [
+export const navigationListItems =  [
         {
-            navlabel: 'shop',
-            nestednav:
-            {
-            category: 'Apparels',
-                subcategory: [
+            navLabel: 'shop',
+            nestedNav:
+                [
                     {
-                        subcategoryName : 'pants',
-                        subcategoryType : [
+                    category: 'Apparels',
+                    subcategories: [
                             {
-                                subcategoryTypeName : 'sidewept',
+                                subcategoryName : 'pants',
+                                subcategoryType : [
+                                        {subcategoryTypeName : 'sidewept'},
+                                        {subcategoryTypeName : 'sidewept022'},
+                                ],
                             },
-                        ]
+                         ],
                     },
-                ]
-            },
+                ],
         },
-        {
-            navlabel: 'shop2',
-            nestednav:
-            {
-            category: 'Apparels',
-                subcategory: [
-                    {
-                        subcategoryName : 'pants',
-                        subcategoryType : [
-                            {
-                                subcategoryTypeName : 'sidewept',
-                            },
-                        ]
-                    },
-                ]
-            },
-        },
-    ]
-}
+
+
+
+]
