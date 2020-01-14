@@ -1,6 +1,6 @@
 import React from "react";
 import Styled from "styled-components";
-import {NavigationMobile} from './navigationmobile';
+import {NavigationMobile} from './NavigationMobile/NavigationMobile';
 
 const NavigationsWrapper = Styled.div`
 
