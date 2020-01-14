@@ -21,7 +21,8 @@ export class NavigationDesktop extends React.Component {
                 <NavigationWrapper>
 
                     <NavigationShop onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}/>
-                    
+
+
                     <NavigationPages>
                         <li><a href="/">Fabric</a></li>
                         <li><a href="/">Journal</a></li>
