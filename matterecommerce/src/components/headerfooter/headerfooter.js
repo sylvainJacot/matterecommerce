@@ -3,7 +3,7 @@ import Styled from 'styled-components';
 import {Navigation} from '../navigation/Navigation';
 import {MatterLogo} from '../default/icons';
 import {SubNavigation} from '../navigation/SubNavigation';
-import {NavigationMobile} from "../navigation/NavigationMobile/NavigationMobile";
+import {NavigationMobile} from "../navigation/NavigationDesktop/NavigationDesktop";
 
 const HeaderWrapper = Styled.div`
 display: flex;

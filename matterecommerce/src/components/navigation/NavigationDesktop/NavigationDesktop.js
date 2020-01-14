@@ -1,17 +1,11 @@
 import React from "react";
 import Styled from "styled-components";
-import {navigationListItems} from '../../../constant/navigation';
+import {NavigationShop} from './NavigationShop';
 
 const NavigationWrapper = Styled.div`
 display: flex;
 `;
 
-const NavigationShop = Styled.ul`
-display: flex;
-    li {
-    margin-left: 16px;
-    }
-`;
 const NavigationPages = Styled.ul`
 display: flex;
     li {
@@ -19,22 +13,15 @@ display: flex;
     }
 `;
 
-export class NavigationMobile extends React.Component {
+export class NavigationDesktop extends React.Component {
     render() {
         const {onMouseEnter,onMouseLeave} = this.props;
         return (
             <>
                 <NavigationWrapper>
-                    <NavigationShop>
-                        <li
-                            onMouseEnter={onMouseEnter}
-                            onMouseLeave={onMouseLeave}
-                        >
-                            <a href={navigationListItems[0].href}>
-                                {navigationListItems[0].title}
-                            </a></li>
-                    </NavigationShop>
 
+                    <NavigationShop onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}/>
+                    
                     <NavigationPages>
                         <li><a href="/">Fabric</a></li>
                         <li><a href="/">Journal</a></li>
