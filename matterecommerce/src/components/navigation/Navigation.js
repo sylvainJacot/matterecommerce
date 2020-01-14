@@ -8,9 +8,10 @@ const NavigationsWrapper = Styled.div`
 
 export class Navigation extends React.Component {
     render() {
+        const {onMouseEnter,onMouseLeave} = this.props;
         return (
             <NavigationsWrapper>
-                <NavigationMobile />
+                <NavigationMobile onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}/>
             </NavigationsWrapper>
         )
     }
