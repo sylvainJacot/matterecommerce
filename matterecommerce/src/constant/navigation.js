@@ -2,22 +2,11 @@ export const navigationListItems =  [
     {
      title: "Shop 1",
      href: "/",
+     shopCategories: [
+         {title: "Category01"},
+         {title: "Category02"},
+         {title: "Category03"},
+     ]
      },
-
-    {
-     title: "Shop 2",
-     href: "/",
-     },
-
-    {
-     title: "Shop 3",
-     href: "/",
-     },
-
-    {
-     title: "Shop 4",
-     href: "/",
-     },
-
 ]
 
