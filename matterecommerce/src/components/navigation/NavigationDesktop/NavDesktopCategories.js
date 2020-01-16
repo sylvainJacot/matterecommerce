@@ -10,6 +10,7 @@ opacity: 1;
 color:red
 `;
 const Category = Styled.li`
+margin: 40px;
 opacity: 0.8;
 `;
 
@@ -18,8 +19,8 @@ export class NavDesktopCategories extends React.Component {
         return (
             <CategoriesWrapper>
                 {
-                    navigationListItems[0].shopCategories.map(category =>
-                        <Category>
+                    navigationListItems[0].shopCategories.map((category) =>
+                        <Category key={category.id} id={category.id}>
                             {category.title}
 
                             <SubCategoriesList
