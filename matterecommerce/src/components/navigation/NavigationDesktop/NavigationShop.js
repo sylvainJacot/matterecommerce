@@ -14,13 +14,15 @@ export class NavigationShop extends React.Component {
         const {onMouseEnter,onMouseLeave} = this.props;
         return (
             <NavigationShopWrapper>
+                {navigationListItems.map((title) =>
                 <li
                     onMouseEnter={onMouseEnter}
                     onMouseLeave={onMouseLeave}
                 >
-                    <a href={navigationListItems[0].href}>
-                        {navigationListItems[0].title}
+                    <a href={title.href}>
+                        {title.title}
                     </a></li>
+                )}
             </NavigationShopWrapper>
         )
     }
