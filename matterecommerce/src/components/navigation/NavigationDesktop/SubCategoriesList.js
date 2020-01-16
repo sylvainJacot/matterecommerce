@@ -13,7 +13,7 @@ export class SubCategoriesList extends React.Component {
         return (
             <>
                 {category.map(subCategory =>
-                    <SubCategories>
+                    <SubCategories key={subCategory.id} id={subCategory.id}>
                         {subCategory.title}
 
                         <SubCategoryTypeList

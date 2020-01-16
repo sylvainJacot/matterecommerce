@@ -3,7 +3,8 @@ import Styled from 'styled-components';
 import {NavDesktopCategories} from './NavigationDesktop/NavDesktopCategories';
 
 const SubNavigationWrapper = Styled.div`
-background: ${props => props.isSubNavOpen ? 'lightyellow' : 'red'};
+display: ${props => props.isSubNavOpen ? 'none' : 'true'};
+background-color: lightyellow;
 `;
 
 export class SubNavigation extends React.Component {

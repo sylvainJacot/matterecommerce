@@ -3,9 +3,10 @@ import Styled from 'styled-components';
 import {Navigation} from '../navigation/Navigation';
 import {MatterLogo} from '../default/icons';
 import {SubNavigation} from '../navigation/SubNavigation';
-import {NavigationMobile} from "../navigation/NavigationDesktop/NavigationDesktop";
 
-const HeaderWrapper = Styled.div`
+const NavigationWrapper = Styled.div`
+`;
+const MainNavWrapper = Styled.div`
 display: flex;
 align-items: center;
 height: 80px;
@@ -25,15 +26,22 @@ export class HeaderFooter extends React.Component {
             {isSubNavOpen: !this.state.isSubNavOpen},
         );
     };
+    clickFunction = () => {
+        console.log("Click worked!");
+    };
+
+
 
     render() {
         return (
             <>
-                <HeaderWrapper>
+                <NavigationWrapper onMouseLeave={this.toggleSubNav} onClick={this.clickFunction}>
+                <MainNavWrapper>
                     <MatterLogo/>
-                    <Navigation onMouseEnter={this.toggleSubNav} onMouseLeave={this.toggleSubNav}/>
-                </HeaderWrapper>
+                    <Navigation onMouseEnter={this.toggleSubNav}/>
+                </MainNavWrapper>
                 <SubNavigation SubNavigationActive={this.state.isSubNavOpen}/>
+                </NavigationWrapper>
                 {this.props.children}
              </>
         )
