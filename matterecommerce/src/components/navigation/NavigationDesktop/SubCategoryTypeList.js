@@ -7,14 +7,12 @@ opacity: 0.5;
 
 export class SubCategoryTypeList extends React.Component {
     render() {
-        const {subCategoryType} = this.props;
+        //const {subCategoryType} = this.props;
         return (
             <>
-                {subCategoryType.map(subCategoryType =>
                     <SubCategoryType>
-                        {subCategoryType}
+
                     </SubCategoryType>
-                )}
                 </>
         )
     }

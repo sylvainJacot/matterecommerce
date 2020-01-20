@@ -1,6 +1,6 @@
 import React from "react";
 import Styled from "styled-components";
-import {navigationListItems} from "../../../constant/navigation";
+import {navigationListItems} from "../../../constant/navigationitems";
 
 const NavigationShopWrapper = Styled.ul`
 display: flex;
@@ -11,17 +11,18 @@ display: flex;
 
 export class NavigationShop extends React.Component {
     render() {
-        const {onMouseEnter,onMouseLeave} = this.props;
+        const {onMouseEnter} = this.props;
         return (
             <NavigationShopWrapper>
                 {navigationListItems.map((navigationListItem) =>
-                <li key={navigationListItem.id}
+                <li
+                    key={navigationListItem.id}
                     onMouseEnter={onMouseEnter}
-                    onMouseLeave={onMouseLeave}
                 >
                     <a href={navigationListItem.href}>
                         {navigationListItem.title}
-                    </a></li>
+                    </a>
+                </li>
                 )}
             </NavigationShopWrapper>
         )

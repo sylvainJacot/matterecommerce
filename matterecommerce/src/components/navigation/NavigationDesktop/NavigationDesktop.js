@@ -18,11 +18,8 @@ export class NavigationDesktop extends React.Component {
         const {onMouseEnter,onMouseLeave} = this.props;
         return (
             <>
-                <NavigationWrapper>
-
-                    <NavigationShop onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}/>
-
-
+                <NavigationWrapper onMouseLeave={onMouseLeave}r>
+                    <NavigationShop onMouseEnter={onMouseEnter}/>
                     <NavigationPages>
                         <li><a href="/">Fabric</a></li>
                         <li><a href="/">Journal</a></li>

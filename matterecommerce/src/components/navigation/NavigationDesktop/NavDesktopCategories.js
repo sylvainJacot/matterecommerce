@@ -1,6 +1,5 @@
 import React from "react";
 import Styled from 'styled-components';
-import {navigationListItems} from '../../../constant/navigation';
 import {SubCategoriesList} from "./SubCategoriesList";
 
 
@@ -16,21 +15,21 @@ opacity: 0.8;
 
 export class NavDesktopCategories extends React.Component {
     render() {
+
         return (
-            <CategoriesWrapper>
-                {
-                    navigationListItems[0].shopCategories.map((category) =>
-                        <Category key={category.id} id={category.id}>
-                            {category.title}
+            <>
+                {this.props.navigationListItem.shopCategories.map((shopCategorie, id) =>
+            <CategoriesWrapper key={id}>
+                {shopCategorie.title}
+                <Category>
 
-                            <SubCategoriesList
-                                category={category.subCategory}
-                            />
+                    <SubCategoriesList/>
 
-                        </Category>
-                    )
-                }
+                </Category>
+
             </CategoriesWrapper>
+                    )}
+                    </>
         )
     }
 }

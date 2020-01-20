@@ -9,18 +9,15 @@ color:blue;
 
 export class SubCategoriesList extends React.Component {
     render() {
-        const {category} = this.props;
+        //const {category} = this.props;
         return (
             <>
-                {category.map(subCategory =>
-                    <SubCategories key={subCategory.id} id={subCategory.id}>
-                        {subCategory.title}
+                    <SubCategories>
 
-                        <SubCategoryTypeList
-                            subCategoryType = {subCategory.subCategoryType}
-                        />
+                        <SubCategoryTypeList/>
+
                     </SubCategories>
-                )}
+
                 </>
         )
     }

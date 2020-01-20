@@ -26,16 +26,13 @@ export class HeaderFooter extends React.Component {
             {isSubNavOpen: !this.state.isSubNavOpen},
         );
     };
-    clickFunction = () => {
-        console.log("Click worked!");
-    };
 
 
 
     render() {
         return (
             <>
-                <NavigationWrapper onMouseLeave={this.toggleSubNav} onClick={this.clickFunction}>
+                <NavigationWrapper onMouseLeave={this.toggleSubNav}>
                 <MainNavWrapper>
                     <MatterLogo/>
                     <Navigation onMouseEnter={this.toggleSubNav}/>

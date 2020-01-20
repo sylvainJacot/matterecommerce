@@ -1,7 +1,7 @@
 import React from "react";
 import Styled from 'styled-components';
 import {NavDesktopCategories} from './NavigationDesktop/NavDesktopCategories';
-import {navigationListItems} from "../../constant/navigation";
+import {navigationListItems} from '../../constant/navigationitems';
 
 const SubNavigationWrapper = Styled.div`
 display: ${props => props.isSubNavOpen ? 'none' : 'true'};
@@ -12,12 +12,13 @@ export class SubNavigation extends React.Component {
     render() {
         const {SubNavigationActive} = this.props;
         return (
-            <SubNavigationWrapper isSubNavOpen={SubNavigationActive}>
-
-                    <NavDesktopCategories />
-
+            <>
+                { navigationListItems.map((navigationListItem, id) =>
+                    <SubNavigationWrapper isSubNavOpen={SubNavigationActive} key={id} >
+                        <NavDesktopCategories navigationListItem={navigationListItem} />
                     </SubNavigationWrapper>
-
+                )}
+            </>
         )
     }
 }
